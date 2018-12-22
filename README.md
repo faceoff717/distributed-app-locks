@@ -3,6 +3,9 @@ Synchronization toolset for distributed applications provides utilities for cros
 
 ## Contents
 
+* [Key Features](#key-features)
+* [Prerequisites](#prerequisites)
+
 ## Key features
 
 This toolset provides a convenient and reliable way to synchronize your applications located on different hosts. It combines C#'s lock and Mutex syntax usage advantages. The lock itself imlements Dispose pattern to release locked resources so you don't need to call methdos manualy, just put you'r critical lines of code inside using block and and there you have it. 
