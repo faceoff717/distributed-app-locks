@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>    
+    <TargetFrameworks>net452;netstandard2.0;netcoreapp2.2</TargetFrameworks>
+    <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <PackageId>System.Distribution.Locks.Sql</PackageId>
+    <Authors>Anton Anpilogov</Authors>
+    <Company />
+    <Product>Distrubuted Mutex</Product>
+    <Description>Mutex for syncronize distributed applications</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageLicenseUrl>https://opensource.org/licenses/GPL-3.0</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <AssemblyName>System.Distribution.Locks.Sql</AssemblyName>
+    <RootNamespace>System.Distribution.Locks.Sql</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\System.Distribution.Locks\System.Distribution.Locks.csproj" />
+  </ItemGroup>
+
+</Project>
