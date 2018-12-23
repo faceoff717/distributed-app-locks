@@ -22,9 +22,9 @@ Library is using .NET Standard 2.0. It can be used with .NET Core 2.2 or .NET Fr
 
 ## Usage
 
-First of all you need to create a unique-named mutex to protect your resourse(s) from parallel access. More details you can get in implementation details of the mutexes.
+First of all, you need to create a unique-named mutex to protect your resourse(s) from parallel access. More details you can get in implementation details of the mutexes.
 
-The usage of the mutex are pretty simple all what you need is to create a *using* block
+The usage of the mutex is pretty simple, all that you need is to create a *using* block
 
 ```csharp
   IDistributedMutex mutex = CreateSomeMutex();
@@ -35,7 +35,7 @@ The usage of the mutex are pretty simple all what you need is to create a *using
   }
 ```
 
-At that sample, the mutex will obtain and lock your resource or wait 10 seconds and after that will give control to your code back if it was failed to obtain the lock. To handle that you can use *ILockState* result:
+At that sample, the mutex will obtain and lock your resource or wait 10 seconds, and after that will give control to your code back, if it was failed to obtain the lock. To handle that you can use *ILockState* result:
 
 ```csharp
   using (var @lock = mutex.WaitOne(10000))
@@ -59,7 +59,9 @@ Lock result can contain the next values:
 
 ## Mutex based on Microsoft SQL Server implementation
 
-### Prerequisities
+This implementation is using stored procedure sp_getapplock shipped with Microsoft SQL Server. More information about it you can find [here](https://docs.microsoft.com/ru-ru/sql/relational-databases/system-stored-procedures/sp-getapplock-transact-sql?view=sql-server-2017 "sp_getapplock (Transact-SQL)")
+
+### Prerequisities 
 
 ### Creation of a mutex
 
