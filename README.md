@@ -10,7 +10,6 @@ Synchronization toolset for distributed applications provides utilities for cros
 * [MSSQL-based mutex](#mutex-based-on-microsoft-sql-server-implementation)
   * [Prerequisities](#prerequisities)
   * [Creation of a mutex](#creation-of-a-mutex)
-* [Licence](#licence)
 
 ## Key features
 
@@ -63,8 +62,49 @@ This implementation is using stored procedure sp_getapplock shipped with Microso
 
 ### Prerequisities 
 
+* Microsoft SQL Server 2008 or newer
+
 ### Creation of a mutex
+
+You can create mutex using two arguments: connection factory method and mutex name.
+
+```csharp
+IDistributedMutex mutex =
+                new SqlDistributedMutex(() => 
+                    new SqlConnection("some connection string"), "SampleMutex");
+```
 
 ## Best practices
 
-## Licence
+But the best way to create a mutex is to inherit from it and create objects without any inbound parameters:
+
+```csharp
+public class SampleLockMutex : SqlDistributedMutex
+{
+    public SampleLockMutex() : 
+        base(ConnectionFactory.CreateConnection, nameof(SampleLockMutex))
+        {
+            
+        }        
+}
+```
+
+Also you can use nameof(class) as mutex name. This will prevent you to make a typo in a mutex name.
+
+Another one aproach is to use DI-container to resolve mutexes and inject the connection factory. You can create a marker interface ISampleMutex like that: 
+
+```csharp
+public interface ISampleMutex : IDistributedMutex
+{
+}
+```
+And implement it in your class which will be resolved by DI-container with registered connection factory.
+```csharp
+public class MyInjectedMutex : SqlDistributedMutex, ISampleMutex
+{
+    public MyInjectedMutex(Func<SqlConnection> createConnection) 
+        : base(createConnection, nameof(ISampleMutex))
+    {
+    }
+}
+```
