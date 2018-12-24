@@ -1,3 +1,5 @@
+[![CodeFactor](https://www.codefactor.io/repository/github/faceoff717/distributed-app-locks/badge/master)](https://www.codefactor.io/repository/github/faceoff717/distributed-app-locks/overview/master)
+
 # Distributed application lock toolset
 Synchronization toolset for distributed applications provides utilities for cross-server mutex implementation.
 
