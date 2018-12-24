@@ -34,7 +34,7 @@ namespace System.Distribution.Locks.Sql
         }
 
         internal class Locker : ILockState
-        {            
+        {
             private readonly Func<SqlConnection> _createConnection;
             protected internal SqlCommand Command;
 
@@ -68,7 +68,7 @@ namespace System.Distribution.Locks.Sql
 
             protected internal virtual void LockResource()
             {
-                LockResult = (LockResult)Command.ExecuteScalar();                
+                LockResult = (LockResult) Command.ExecuteScalar();
             }
 
             private SqlCommand CreateCommandWith(SqlConnection connection)

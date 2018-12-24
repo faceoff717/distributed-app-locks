@@ -32,14 +32,13 @@ namespace SampleLockApplication
             Console.WriteLine($"Job {job} is waiting for resource to be free");
             using (var @lock = _mutex.WaitOne(10000))
             {
-                Console.WriteLine(@lock.LockResult != LockResult.AcquisitionTimeout ?
-                        $"Job {job} acquired lock" : 
-                        $"Job {job} get resource by timeout");
+                Console.WriteLine(@lock.LockResult != LockResult.AcquisitionTimeout
+                    ? $"Job {job} acquired lock"
+                    : $"Job {job} get resource by timeout");
 
                 Thread.Sleep(3000);
                 Console.WriteLine($"Job {job} releases resource");
             }
-            
         }
     }
 }

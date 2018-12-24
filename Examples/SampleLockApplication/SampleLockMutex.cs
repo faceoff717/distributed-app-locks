@@ -1,7 +1,4 @@
-﻿using System;
-using System.Data.SqlClient;
-using System.Distribution.Locks.Sql;
-
+﻿using System.Distribution.Locks.Sql;
 
 namespace SampleLockApplication
 {
@@ -9,9 +6,6 @@ namespace SampleLockApplication
     {
         public SampleLockMutex() : base(ConnectionFactory.CreateConnection, nameof(SampleLockMutex))
         {
-            
-        }        
+        }
     }
-
-  
 }

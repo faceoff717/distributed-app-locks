@@ -8,7 +8,7 @@ namespace SampleLockApplication
         // TODO: you should to implement connection factory by yourself.
         // You should have any active MS SQL Server 2008 or newer
         public static SqlConnection CreateConnection()
-        {            
+        {
             throw new NotImplementedException();
 
             //var connectionString = "";
