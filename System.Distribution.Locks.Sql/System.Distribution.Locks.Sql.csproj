@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>    
-    <TargetFrameworks>net452;netstandard2.0;netcoreapp2.2</TargetFrameworks>
+    <TargetFrameworks>net452;netstandard2.0;netcoreapp2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
     <PackageId>System.Distribution.Locks.Sql</PackageId>
