@@ -20,7 +20,7 @@ This toolset provides a convenient and reliable way to synchronize your applicat
 
 ## Prerequisites
 
-Library is using .NET Standard 2.0. It can be used with .NET Core 2.2 or .NET Framework 4.5.2 out of the box. 
+Library is using .NET Standard 2.0. It can be used with .NET Core 2.0 or .NET Framework 4.5.2 out of the box. 
 
 ## Usage
 
