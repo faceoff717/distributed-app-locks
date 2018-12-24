@@ -10,6 +10,7 @@ Synchronization toolset for distributed applications provides utilities for cros
 * [MSSQL-based mutex](#mutex-based-on-microsoft-sql-server-implementation)
   * [Prerequisities](#prerequisities)
   * [Creation of a mutex](#creation-of-a-mutex)
+* [Best practices](#best-practices)
 
 ## Key features
 
