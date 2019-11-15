@@ -18,10 +18,7 @@
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\System.Distribution.Locks\System.Distribution.Locks.csproj" />
+    <PackageReference Include="System.Distribution.Locks" Version="1.0.0" />
   </ItemGroup>
 
 </Project>

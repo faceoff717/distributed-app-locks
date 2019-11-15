@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFrameworks>net452;netstandard2.0;netcoreapp2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
 </Project>
