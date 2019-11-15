@@ -1,4 +1,4 @@
-[![CodeFactor](https://www.codefactor.io/repository/github/faceoff717/distributed-app-locks/badge/master)](https://www.codefactor.io/repository/github/faceoff717/distributed-app-locks/overview/master)
+[![CodeFactor](https://www.codefactor.io/repository/github/faceoff717/distributed-app-locks/badge/master)](https://www.codefactor.io/repository/github/faceoff717/distributed-app-locks/overview/master) [![Build Status](https://faceoff717.visualstudio.com/distributed-app-locks/_apis/build/status/distributed-app-locks-.NET%20Desktop-CI?branchName=master)](https://faceoff717.visualstudio.com/distributed-app-locks/_build/latest?definitionId=6?branchName=master)
 
 # Distributed application lock toolset
 Synchronization toolset for distributed applications provides utilities for cross-server mutex implementation.
@@ -20,7 +20,7 @@ This toolset provides a convenient and reliable way to synchronize your applicat
 
 ## Prerequisites
 
-Library is using .NET Standard 2.0. It can be used with .NET Core 2.2 or .NET Framework 4.5.2 out of the box. 
+Library is using .NET Standard 2.0. It can be used with .NET Core 2.0 or .NET Framework 4.5.2 out of the box. 
 
 ## Usage
 

@@ -3,6 +3,12 @@
   <PropertyGroup>
     <TargetFrameworks>net452;netstandard2.0;netcoreapp2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
+    <Authors>Anton Anpilogov</Authors>
+    <Product>Distrubuted Mutex</Product>
+    <Description>Mutex for syncronize distributed applications</Description>
+    <PackageLicenseUrl>https://opensource.org/licenses/GPL-3.0</PackageLicenseUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
