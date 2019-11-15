@@ -14,11 +14,12 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyName>System.Distribution.Locks.Sql</AssemblyName>
     <RootNamespace>System.Distribution.Locks.Sql</RootNamespace>
+    <Version>1.2.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
-    <PackageReference Include="System.Distribution.Locks" Version="1.0.0" />
+    <PackageReference Include="System.Distribution.Locks" Version="1.2.0" />
   </ItemGroup>
 
 </Project>

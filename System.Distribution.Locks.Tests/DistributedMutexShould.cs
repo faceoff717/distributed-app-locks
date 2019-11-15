@@ -15,7 +15,7 @@ namespace System.Distribution.Locks.Tests
 
         public DistributedMutexShould()
         {
-            _testSqlDistributedMutex = new TestMutex(CreateConnection, ExpectedName);
+            _testSqlDistributedMutex = new TestMutex(DatabaseFixture.CreateConnection, ExpectedName);
         }
 
         [Fact]
@@ -67,14 +67,6 @@ namespace System.Distribution.Locks.Tests
                 mutex = lockResult;
 
             mutex.Disposed.Should().BeTrue();
-        }
-
-        protected internal SqlConnection CreateConnection()
-        {
-            SqlConnection connection =
-                new SqlConnection(
-                    "Initial Catalog=TestDatabase; Data Source=dbexample; user id=user; password=password;");
-            return connection;
         }
     }
 }
