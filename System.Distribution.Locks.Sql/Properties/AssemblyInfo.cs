@@ -1,3 +1,3 @@
 ﻿using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("System.Distribution.Locks.Tests")]
+[assembly: InternalsVisibleTo("Distributed.Locks.Tests")]

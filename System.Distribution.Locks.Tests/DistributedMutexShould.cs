@@ -1,10 +1,9 @@
-﻿using System.Data.SqlClient;
-using System.Distribution.Locks.Sql;
+﻿using Distributed.Locks.Sql;
 using FluentAssertions;
 using FluentAssertions.Execution;
 using Xunit;
 
-namespace System.Distribution.Locks.Tests
+namespace Distributed.Locks.Tests
 {
     public class DistributedMutexShould
     {

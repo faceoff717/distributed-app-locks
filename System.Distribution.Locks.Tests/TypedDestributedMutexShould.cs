@@ -1,9 +1,8 @@
-﻿using System.CodeDom;
-using System.Distribution.Locks.Sql;
+﻿using Distributed.Locks.Sql;
 using FluentAssertions;
 using Xunit;
 
-namespace System.Distribution.Locks.Tests
+namespace Distributed.Locks.Tests
 {
     public class TypedDistributedMutexShould
     {

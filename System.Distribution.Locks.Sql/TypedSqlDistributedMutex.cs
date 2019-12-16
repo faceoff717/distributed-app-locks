@@ -1,6 +1,7 @@
-﻿using System.Data.SqlClient;
+﻿using System;
+using System.Data.SqlClient;
 
-namespace System.Distribution.Locks.Sql
+namespace Distributed.Locks.Sql
 {
     public class SqlDistributedMutex<T> : SqlDistributedMutex, IDistributedMutex<T>
     {

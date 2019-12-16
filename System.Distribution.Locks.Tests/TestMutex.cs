@@ -1,7 +1,8 @@
-﻿using System.Data.SqlClient;
-using System.Distribution.Locks.Sql;
+﻿using System;
+using System.Data.SqlClient;
+using Distributed.Locks.Sql;
 
-namespace System.Distribution.Locks.Tests
+namespace Distributed.Locks.Tests
 {
     public class TestMutex : SqlDistributedMutex
     {

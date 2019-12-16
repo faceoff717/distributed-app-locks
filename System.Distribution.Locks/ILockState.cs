@@ -1,4 +1,6 @@
-﻿namespace System.Distribution.Locks
+﻿using System;
+
+namespace Distributed.Locks
 {
     public interface ILockState : IDisposable
     {

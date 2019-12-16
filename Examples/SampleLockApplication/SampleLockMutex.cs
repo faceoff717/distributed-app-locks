@@ -1,4 +1,4 @@
-﻿using System.Distribution.Locks.Sql;
+﻿using Distributed.Locks.Sql;
 
 namespace SampleLockApplication
 {

@@ -6,11 +6,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\System.Distribution.Locks.Sql\System.Distribution.Locks.Sql.csproj" />
+    <ProjectReference Include="..\..\System.Distribution.Locks.Sql\Distributed.Locks.Sql.csproj" />
   </ItemGroup>
 
 </Project>

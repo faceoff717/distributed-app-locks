@@ -1,6 +1,6 @@
 ﻿using System;
-using System.Distribution.Locks;
 using System.Threading;
+using Distributed.Locks;
 
 namespace SampleLockApplication
 {

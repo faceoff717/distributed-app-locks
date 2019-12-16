@@ -1,4 +1,4 @@
-﻿namespace System.Distribution.Locks
+﻿namespace Distributed.Locks
 {
     public interface IDistributedMutex
     {

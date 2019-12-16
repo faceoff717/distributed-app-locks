@@ -4,7 +4,7 @@
     <TargetFrameworks>net452;netstandard2.0;netcoreapp2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>System.Distribution.Locks.Sql</PackageId>
+    <PackageId>Distributed.Locks.Sql</PackageId>
     <Authors>Anton Anpilogov</Authors>
     <Company />
     <Product>Distrubuted Mutex</Product>
@@ -12,9 +12,9 @@
     <RepositoryType>git</RepositoryType>
     <PackageLicenseUrl>https://opensource.org/licenses/GPL-3.0</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <AssemblyName>System.Distribution.Locks.Sql</AssemblyName>
-    <RootNamespace>System.Distribution.Locks.Sql</RootNamespace>
-    <Version>1.3.0</Version>
+    <AssemblyName>Distributed.Locks.Sql</AssemblyName>
+    <RootNamespace>Distributed.Locks.Sql</RootNamespace>
+    <Version>1.4.0</Version>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>Itu.Keys.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
@@ -25,8 +25,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
-    <PackageReference Include="System.Distribution.Locks" Version="1.3.0" />
+    <PackageReference Include="Distributed.Locks" Version="1.4.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
   </ItemGroup>
 
 </Project>

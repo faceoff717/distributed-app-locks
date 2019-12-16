@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.SqlClient;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.SqlClient;
 
-namespace System.Distribution.Locks.Tests
+namespace Distributed.Locks.Tests
 {
     public class DatabaseFixture
     {

@@ -10,9 +10,12 @@
     <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.3.0</Version>
+    <Version>1.4.0</Version>
     <SignAssembly>false</SignAssembly>
     <AssemblyOriginatorKeyFile>Itu.Keys.snk</AssemblyOriginatorKeyFile>
+    <PackageId>Distributed.Locks</PackageId>
+    <RootNamespace>Distributed.Locks</RootNamespace>
+    <AssemblyName>Distributed.Locks</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
