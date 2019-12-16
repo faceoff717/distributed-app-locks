@@ -1,4 +1,5 @@
 ﻿using System.Data.SqlClient;
+using System.Threading;
 
 namespace System.Distribution.Locks.Sql
 {
@@ -38,14 +39,23 @@ namespace System.Distribution.Locks.Sql
             private readonly Func<SqlConnection> _createConnection;
             protected internal SqlCommand Command;
 
-            private const string SqlCommandText = @"                
-                DECLARE @result int;                  
-                exec @result = sp_getapplock 
-                    @Resource=@ResourceName, 
-                    @LockMode='Exclusive', 
-                    @LockOwner='Transaction', 
-                    @LockTimeout = @LockTimeout
-                SELECT @result";
+            private const string SqlCommandText = @"                    
+                DECLARE @result int;
+                DECLARE @applock_test int = 0;
+                
+                SELECT @applock_test = APPLOCK_TEST('public', @ResourceName, 'Exclusive', 'Transaction');
+
+                IF (@applock_test = 0)
+	                SELECT 1000;
+                ELSE
+                BEGIN                  
+                    exec @result = sp_getapplock 
+                        @Resource=@ResourceName, 
+                        @LockMode='Exclusive', 
+                        @LockOwner='Transaction', 
+                        @LockTimeout = @LockTimeout
+                    SELECT @result
+                END";
 
             internal Locker(Func<SqlConnection> createConnection, string mutexName, int timeout)
             {
@@ -59,11 +69,28 @@ namespace System.Distribution.Locks.Sql
 
             internal ILockState GetLock()
             {
+                DateTime dt = DateTime.Now;
                 Command = BeginTransactionFor(CreateCommandWith(_createConnection()));
-
-                LockResource();
+                
+                while (LockResult != LockResult.Acquired)
+                {
+                    if (MillisecondsPassedFrom(dt) > Timeout)
+                    {
+                        LockResult = LockResult.AcquisitionTimeout;
+                        break;
+                    }
+                    
+                    LockResource();
+                    
+                    Thread.Sleep(100);
+                }
 
                 return this;
+            }
+
+            private double MillisecondsPassedFrom(DateTime dt)
+            {
+                return (DateTime.Now - dt).TotalMilliseconds;
             }
 
             protected internal virtual void LockResource()
@@ -78,7 +105,7 @@ namespace System.Distribution.Locks.Sql
                 command.Parameters
                     .AddWithValue("@ResourceName", MutexName);
                 command.Parameters
-                    .AddWithValue("@LockTimeout", Timeout);
+                    .AddWithValue("@LockTimeout", 100);
 
                 return command;
             }

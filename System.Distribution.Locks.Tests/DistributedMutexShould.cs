@@ -47,7 +47,7 @@ namespace System.Distribution.Locks.Tests
                 using (new AssertionScope())
                 {
                     lockResult.Command.Parameters["@ResourceName"].Value.Should().Be(ExpectedName);
-                    lockResult.Command.Parameters["@LockTimeout"].Value.Should().Be(ExpectedTimeout);
+                    lockResult.Command.Parameters["@LockTimeout"].Value.Should().Be(100);
                 }
             }
         }

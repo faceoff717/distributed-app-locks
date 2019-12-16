@@ -14,8 +14,14 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyName>System.Distribution.Locks.Sql</AssemblyName>
     <RootNamespace>System.Distribution.Locks.Sql</RootNamespace>
-    <Version>1.2.0</Version>
+    <Version>1.3.0</Version>
+    <SignAssembly>false</SignAssembly>
+    <AssemblyOriginatorKeyFile>Itu.Keys.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Itu.Keys.snk" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="System.Data.SqlClient" Version="4.6.0" />
