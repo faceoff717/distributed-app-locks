@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net452;netstandard2.0;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>net472;netstandard2.0;netcoreapp2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <Authors>Anton Anpilogov</Authors>
     <Product>Distrubuted Mutex</Product>
@@ -10,16 +10,11 @@
     <RepositoryType>git</RepositoryType>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.4.0</Version>
+    <Version>1.5.0</Version>
     <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>Itu.Keys.snk</AssemblyOriginatorKeyFile>
     <PackageId>Distributed.Locks</PackageId>
     <RootNamespace>Distributed.Locks</RootNamespace>
     <AssemblyName>Distributed.Locks</AssemblyName>
   </PropertyGroup>
-
-  <ItemGroup>
-    <None Remove="Itu.Keys.snk" />
-  </ItemGroup>
 
 </Project>

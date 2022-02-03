@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>    
-    <TargetFrameworks>net452;netstandard2.0;netcoreapp2.0</TargetFrameworks>
+    <TargetFrameworks>net472;netcoreapp2.0;netstandard2.0</TargetFrameworks>
     <OutputType>Library</OutputType>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Distributed.Locks.Sql</PackageId>
@@ -14,14 +14,13 @@
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
     <AssemblyName>Distributed.Locks.Sql</AssemblyName>
     <RootNamespace>Distributed.Locks.Sql</RootNamespace>
-    <Version>1.4.0</Version>
+    <Version>1.5.0</Version>
     <SignAssembly>false</SignAssembly>
-    <AssemblyOriginatorKeyFile>Itu.Keys.snk</AssemblyOriginatorKeyFile>
     <DelaySign>false</DelaySign>
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Itu.Keys.snk" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.0" />
   </ItemGroup>
 
   <ItemGroup>

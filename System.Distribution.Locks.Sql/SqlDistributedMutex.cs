@@ -30,6 +30,16 @@ namespace Distributed.Locks.Sql
             return CreateLocker(timeout).GetLock();
         }
 
+        /// <summary>
+        /// Trying to obtain mutex until resource will be available or timeout expired
+        /// </summary>
+        /// <param name="timeout">Timeout to obtaining resource lock</param>
+        /// <returns>State of the resource lock result</returns>
+        public ILockState WaitOne(TimeSpan timeout)
+        {
+            return WaitOne((int)Math.Truncate(timeout.TotalMilliseconds));
+        }
+
         internal virtual Locker CreateLocker(int timeout)
         {
             return new Locker(_createConnection, _mutexName, timeout);
